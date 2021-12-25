@@ -1,0 +1,5 @@
+#+Title: Algorithm
+
+* Compile and run
+> mvn run
+> mvn exec:java -Dexec.mainClass="algorithm.App"
