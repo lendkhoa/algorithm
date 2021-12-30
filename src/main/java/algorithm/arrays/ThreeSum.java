@@ -39,7 +39,7 @@ public class ThreeSum {
 			} else if (sum > 0) {
 				hi -= 1;
 			} else {
-				ls.add(Arrays.asList(nums[i], nums[lo], nums[hi]));
+				ls.add(Arrays.asList(nums[index], nums[lo], nums[hi]));
 				// skip duplicate
 				while (lo < hi && nums[lo] == nums[lo - 1])
 					++lo;
