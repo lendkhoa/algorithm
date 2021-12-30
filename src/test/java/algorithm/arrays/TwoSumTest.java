@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.arrays;
 
 import static org.junit.Assert.*;
 
