@@ -40,6 +40,8 @@ public class ThreeSum {
 				hi -= 1;
 			} else {
 				ls.add(Arrays.asList(nums[index], nums[lo], nums[hi]));
+				lo += 1;
+				hi -= 1;
 				// skip duplicate
 				while (lo < hi && nums[lo] == nums[lo - 1])
 					++lo;
