@@ -14,5 +14,15 @@ public class ThreeSumTest {
 		assertEquals(res.size(), 2);
 		assertEquals(res.get(0), Arrays.asList(-1, -1, 2));
 		assertEquals(res.get(1), Arrays.asList(-1, 0, 1));
-	}	
+	}
+
+    @Test
+    public void threeSumTest2() {
+        ThreeSum agent = new ThreeSum();
+        int[] nums = new int[]{-1,0,1,2,4,-4};
+        List<List<Integer>> res = agent.solveWithTwoSum(nums);
+        assertEquals(res.size(), 2);
+        assertEquals(res.get(1), Arrays.asList(-1, 0, 1));
+        assertEquals(res.get(0), Arrays.asList(-4, 0, 4));
+	}
 }
