@@ -32,6 +32,15 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    
+    - name: Running JUnit Tests
+      run: |
+        mvn clean jacoco:prepare-agent install jacoco:report
+        mvn clean test
+
+    - name: jacoco-badge-generator
+      uses: cicirello/jacoco-badge-generator@v2.5.0
+
 
     # - name: Publish to Docker image
     #   uses: mr-smithers-excellent/docker-build-push@v5
