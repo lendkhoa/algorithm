@@ -1,4 +1,5 @@
 # Algorithm
+![GitHub repo size](https://img.shields.io/github/repo-size/lendkhoa/algorithm) ![GitHub last commit](https://img.shields.io/github/last-commit/lendkhoa/algorithm)
 
 ## Run coverage report
 > mvn clean jacoco:prepare-agent install jacoco:report
