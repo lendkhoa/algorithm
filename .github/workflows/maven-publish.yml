@@ -38,7 +38,7 @@ jobs:
     - name: Running JUnit Tests
       run: |
         mvn clean jacoco:prepare-agent install jacoco:report
-        mvn clean test
+        # mvn clean test
         echo 'PRINT OUTPUT'
         pwd
         echo '>>>>>>>>>>>'
