@@ -8,6 +8,8 @@ on:
     types: [created]
   push:
     branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   build:
@@ -15,7 +17,7 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
     permissions:
       contents: read
       packages: write
@@ -36,12 +38,11 @@ jobs:
     - name: Running JUnit Tests
       run: |
         mvn clean jacoco:prepare-agent install jacoco:report
-        mvn clean test
+        # mvn clean test
+
 
     - name: jacoco-badge-generator
       uses: cicirello/jacoco-badge-generator@v2.6.1
-      with:
-        jacoco-csv-file: catalog/target/site/jacoco/jacoco.csv
 
 
     # - name: Publish to Docker image
