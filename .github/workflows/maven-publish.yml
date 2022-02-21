@@ -39,10 +39,6 @@ jobs:
       run: |
         mvn clean jacoco:prepare-agent install jacoco:report
         # mvn clean test
-        echo 'PRINT OUTPUT'
-        pwd
-        echo '>>>>>>>>>>>'
-        ls -ltra target/
 
 
     - name: jacoco-badge-generator
