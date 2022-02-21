@@ -40,6 +40,8 @@ jobs:
 
     - name: jacoco-badge-generator
       uses: cicirello/jacoco-badge-generator@v2.5.0
+      with:
+        jacoco-csv-file: catalog/target/site/jacoco/jacoco.csv
 
 
     # - name: Publish to Docker image
