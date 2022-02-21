@@ -39,7 +39,7 @@ jobs:
         mvn clean test
 
     - name: jacoco-badge-generator
-      uses: cicirello/jacoco-badge-generator@v2.5.0
+      uses: cicirello/jacoco-badge-generator@v2.6.1
       with:
         jacoco-csv-file: catalog/target/site/jacoco/jacoco.csv
 
