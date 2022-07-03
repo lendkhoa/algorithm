@@ -10,8 +10,10 @@ public class App
 {
     public static void main( String[] args )
     {
-        ThreeSum agent = new ThreeSum();
-        agent.solveWithTwoSum(new int[]{-1,0,1,2,-1,-4});
-        System.out.println( "Hello World!" );
+        int top = -1;
+        int arr[] = new int[2];
+        for(int i: arr)
+            System.out.println(i);
+        System.out.println("Top: " + top);
     }
 }
