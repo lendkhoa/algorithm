@@ -11,3 +11,5 @@ Report will be generated in target/site/jacoco
 
 Build, run test and create jar under target/
 > mvn exec:java -Dexec.mainClass="algorithm.App"
+## Run specific test
+> mvn test -Dtest=DesignRulesTest

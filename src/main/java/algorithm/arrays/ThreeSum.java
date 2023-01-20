@@ -48,4 +48,40 @@ public class ThreeSum {
 			}
 		}
 	}
+
+	/**
+	 * Solve for triplets that add up to a target number
+	 * @param nums the array of numbers
+	 * @param target the target number
+	 */
+	public List<List<Integer>> solveWithTwoSumTarget(int[] nums, int target) {
+		Arrays.sort(nums);
+		List<List<Integer>> ls = new ArrayList<>();
+		for (int i = 0; i < nums.length; i++) {
+			// if the current value is the same as the one before it, skip
+			if (i == 0 || nums[i - 1] != nums[i]) {
+				twoSumWithTarget(nums, i, ls, target);
+			}
+		}
+		return ls;
+	}
+
+	private void twoSumWithTarget(int[] nums, int index, List<List<Integer>> ls, int target) {
+		int low = index + 1;
+		int hi = nums.length - 1;
+		while(low < hi) {
+			int sum = nums[index] + nums[low] + nums[hi];
+			if(sum < target) {
+				low++;
+			} else if(sum > target) {
+				hi--;
+			} else {
+				ls.add(Arrays.asList(nums[index], nums[low], nums[hi]));
+				low++;
+				hi--;
+				while(low < hi && nums[low] == nums[low - 1])
+					low++;
+			}
+		}
+	}
 }

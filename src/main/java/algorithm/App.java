@@ -1,19 +1,20 @@
 package algorithm;
 import algorithm.arrays.ThreeSum;
+import algorithm.arrays.OtherArrayProblems;
+import algorithm.lib.Deque;
+
 
 /**
  * Hello world!
  *
  */
 
-public class App 
+public class App
 {
     public static void main( String[] args )
     {
-        int top = -1;
-        int arr[] = new int[2];
-        for(int i: arr)
-            System.out.println(i);
-        System.out.println("Top: " + top);
+        System.out.println("Deque example");
+        System.out.println(OtherArrayProblems.nonDecreasingArray(new int[]{4,2,3}));
+        System.out.println(OtherArrayProblems.nonDecreasingArray(new int[]{4,2,1}));
     }
 }
