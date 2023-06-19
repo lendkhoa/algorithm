@@ -13,3 +13,17 @@ Build, run test and create jar under target/
 > mvn exec:java -Dexec.mainClass="algorithm.App"
 ## Run specific test
 > mvn test -Dtest=DesignRulesTest
+
+## Example calling children problems
+
+```java
+// In App.java
+
+// System.out.println("Deque example");
+// System.out.println(OtherArrayProblems.nonDecreasingArray(new int[]{4,2,3}));
+// System.out.println(OtherArrayProblems.nonDecreasingArray(new int[]{4,2,1}));
+
+// ReverseWords agent = new ReverseWords();
+// System.out.println(agent.reverse("null statement"));
+// runGuideToCompetitiveProgramming();
+```

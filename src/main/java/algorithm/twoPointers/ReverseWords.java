@@ -22,6 +22,7 @@ public class ReverseWords {
         }
         res.append(' ');
       } else {
+        // insert at the t
         word.insert(0, current);
       }
     }

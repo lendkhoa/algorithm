@@ -2,10 +2,11 @@ package algorithm.lib;
 
 public class Node {
 
-    private int value;
-    private Node left;
+    public Node left;
+    public Node next;
+    public int value;
 
-    Node(int value) {
+    public Node(int value) {
         this.value = value;
     }
 }

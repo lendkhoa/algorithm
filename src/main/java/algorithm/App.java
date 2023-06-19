@@ -1,8 +1,9 @@
 package algorithm;
-import algorithm.arrays.ThreeSum;
-import algorithm.arrays.OtherArrayProblems;
-import algorithm.lib.Deque;
-import algorithm.twoPointers.ReverseWords;
+//import algorithm.arrays.ThreeSum;
+//import algorithm.arrays.OtherArrayProblems;
+//import algorithm.lib.Deque;
+//import algorithm.twoPointers.ReverseWords;
+//import algorithm.lib.GuideToCompetitiveProgramming;
 
 
 /**
@@ -14,12 +15,23 @@ public class App
 {
     public static void main( String[] args )
     {
-        // System.out.println("Deque example");
-        // System.out.println(OtherArrayProblems.nonDecreasingArray(new int[]{4,2,3}));
-        // System.out.println(OtherArrayProblems.nonDecreasingArray(new int[]{4,2,1}));
+    }
 
-        ReverseWords agent = new ReverseWords();
-        System.out.println(agent.reverse("null statement"));
-
+    private static boolean isPrime(int primeCheckNumber) {
+        int remainder = primeCheckNumber;
+        if(primeCheckNumber == 1 || primeCheckNumber == 0) {
+            return false;
+        } else {
+            int number = remainder - 1;
+            while(remainder != 0 && number > 1) {
+                remainder = primeCheckNumber % number;
+                number -= 1;
+            }
+            if(number == 1 && remainder > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 }
