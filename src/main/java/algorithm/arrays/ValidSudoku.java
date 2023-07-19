@@ -9,9 +9,6 @@ import java.util.*;
    Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
  */
 public class ValidSudoku {
-    import java.util.*;
-
-class Solution {
     public boolean isValidSudoku(char[][] board) {
         // check rows
         boolean validRows = false;
@@ -80,5 +77,4 @@ class Solution {
         }
         return true; 
     }
-
 }

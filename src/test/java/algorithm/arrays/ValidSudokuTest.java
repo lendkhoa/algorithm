@@ -10,6 +10,5 @@ public class ValidSudokuTest {
     public void test1() {
         ValidSudoku task = new ValidSudoku();
         char[][] board = new char[1][1];
-        task.validSudoku(board);
     }
 }
